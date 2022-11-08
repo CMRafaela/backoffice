@@ -1,0 +1,40 @@
+{
+  "account": {
+    "id": "3a17dbc8-9659-431c-b401-000b97f6f954",
+    "name": "John Doe",
+    "dob": "1990-01-01",
+    "documentNumber": "3724919569",
+    "products": [
+      {
+        "id": "f4da9586-2281-4040-938b-869bca6393b5",
+        "name": "Bolsa Protegida",
+        "links": {
+          "this": ""
+        }
+      },
+      {
+        "id": "4008c736-b80e-4ab8-95ae-c281f5c72f3a",
+        "name": "Residencial",
+        "links": {
+          "this": ""
+        }
+      }
+    ],
+    "links": {
+      "this": ""
+    }
+  },
+  "product": [
+    {
+      "id": "f4da9586-2281-4040-938b-869bca6393b5",
+      "name": "Bolsa Protegida",
+      "partner": "ACME",
+      "createdAt": "2021-01-01T12:12:000Z",
+      "price": 2.5,
+      "endsAt": "2022-01-01T11:11:999Z",
+      "links": {
+        "this": ""
+      }
+    }
+  ]
+}
