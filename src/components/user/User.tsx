@@ -1,9 +1,5 @@
-import { Typography, TextField } from "@mui/material";
+import { Typography, TextField, Grid } from "@mui/material";
 
-import Grid from "@mui/material/Unstable_Grid2";
-import axios from "axios";
-import Product from "../product/Product";
-import jwt_decode from "jwt-decode";
 export interface ProdutoType {
   id: string;
   name: string;
@@ -19,27 +15,11 @@ export interface UserProps {
   };
 }
 
-const BASE_URL = "https://api.180s.com.br/api/auth";
-const token = "lkYGNIXprV3W8nBk";
-
-// const decoded = jwt_decode(token);
-// console.log(decoded);
-axios
-  .post(BASE_URL, {
-    token: token,
-  })
-  .then((response) => {
-    console.log(response, "user");
-  })
-  .catch((error) => {
-    console.log("error user", error);
-  });
-
 function User(props: UserProps) {
   return (
     <>
       <Grid xs={10} p={5} border="1px solid #DDDDDD" borderRadius={4}>
-        <Typography color="#808080" fontSize={16} fontWeight="bold">
+        <Typography pb={2} color="#808080" fontSize={16} fontWeight="bold">
           Detalhes pessoais
         </Typography>
 
@@ -47,7 +27,7 @@ function User(props: UserProps) {
           spacing={2}
           display="flex"
           alignItems="center"
-          justifyContent="space-around"
+          justifyContent="space-between"
           flexDirection={{ xs: "column", md: "row" }}
         >
           <Grid
@@ -63,8 +43,8 @@ function User(props: UserProps) {
               size={"small"}
               disabled
               id="outlined-disabled"
-              label="ID do contrato"
-              value={props.account.id}
+              label="Nome do usuário"
+              value={props.account.name}
             />
           </Grid>
 
@@ -81,8 +61,8 @@ function User(props: UserProps) {
               size={"small"}
               disabled
               id="outlined-disabled"
-              label="Nome do usuário"
-              value={props.account.name}
+              label="ID do contrato"
+              value={props.account.id}
             />
           </Grid>
 
@@ -122,12 +102,6 @@ function User(props: UserProps) {
           </Grid>
         </Grid>
       </Grid>
-
-      {/* <Grid xs={10} pt={2} display="flex" justifyContent="right">
-        {props.account.products?.map((product) => (
-          <Product product={product} key={product.id} />
-        ))}
-      </Grid> */}
     </>
   );
 }
