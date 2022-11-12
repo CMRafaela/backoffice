@@ -69,7 +69,7 @@ function Product(props: ProductProps) {
 
   return (
     <>
-      <Grid xs={10} p={5} mr={2} border="1px solid #DDDDDD" borderRadius={4}>
+      <Grid xs={12} p={5} mr={2} border="1px solid #DDDDDD" borderRadius={4}>
         <Typography color="#808080" fontSize={16} fontWeight="bold">
           Informações sobre produtos Contratados
         </Typography>
@@ -100,17 +100,17 @@ function Product(props: ProductProps) {
                   spacing={2}
                   display="flex"
                   alignItems="center"
-                  justifyContent="space-around"
-                  flexDirection={{ xs: "column", md: "row" }}
+                  justifyContent={{ xs: "center", lg: "space-around" }}
+                  flexDirection={{ xs: "column", lg: "row" }}
                 >
                   <Grid
                     pt={2}
-                    md={6}
+                    lg={6}
                     xs={12}
                     display="flex"
-                    pr={{ md: 2 }}
+                    pr={{ lg: 2 }}
                     justifyContent="center"
-                    flexDirection={{ xs: "column", md: "row" }}
+                    flexDirection={{ xs: "column", lg: "row" }}
                   >
                     <TextField
                       size={"small"}
@@ -123,12 +123,12 @@ function Product(props: ProductProps) {
 
                   <Grid
                     pt={2}
-                    md={6}
+                    lg={6}
                     xs={12}
                     display="flex"
-                    pr={{ md: 2 }}
+                    pr={{ lg: 2 }}
                     justifyContent="center"
-                    flexDirection={{ xs: "column", md: "row" }}
+                    flexDirection={{ xs: "column", lg: "row" }}
                   >
                     <TextField
                       size={"small"}
@@ -141,12 +141,12 @@ function Product(props: ProductProps) {
 
                   <Grid
                     pt={2}
-                    md={6}
+                    lg={6}
                     xs={12}
                     display="flex"
-                    pr={{ md: 2 }}
+                    pr={{ lg: 2 }}
                     justifyContent="center"
-                    flexDirection={{ xs: "column", md: "row" }}
+                    flexDirection={{ xs: "column", lg: "row" }}
                   >
                     <TextField
                       size={"small"}
@@ -159,11 +159,11 @@ function Product(props: ProductProps) {
 
                   <Grid
                     pt={2}
-                    md={6}
+                    lg={6}
                     xs={12}
                     display="flex"
                     justifyContent="center"
-                    flexDirection={{ xs: "column", md: "row" }}
+                    flexDirection={{ xs: "column", lg: "row" }}
                   >
                     <TextField
                       size={"small"}
