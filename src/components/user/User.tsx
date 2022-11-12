@@ -1,6 +1,7 @@
 import { Typography, TextField } from "@mui/material";
 
 import Grid from "@mui/material/Unstable_Grid2";
+import axios from "axios";
 import Product from "../product/Product";
 
 export interface ProdutoType {
@@ -18,11 +19,25 @@ export interface UserProps {
   };
 }
 
+const BASE_URL = "https://api.180s.com.br/api/auth";
+const token = "lkYGNIXprV3W8nBk";
+
+axios
+  .post(BASE_URL, {
+    token: token,
+  })
+  .then((response) => {
+    console.log(response, "user");
+  })
+  .catch((error) => {
+    console.log("error user", error);
+  });
+
 function User(props: UserProps) {
   return (
     <>
       <Grid xs={10} p={5} border="1px solid #DDDDDD" borderRadius={4}>
-        <Typography fontSize={16} fontWeight="bold">
+        <Typography color="#808080" fontSize={16} fontWeight="bold">
           Detalhes pessoais
         </Typography>
 
