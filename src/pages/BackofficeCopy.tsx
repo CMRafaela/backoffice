@@ -6,7 +6,7 @@ import User, { ProdutoType } from "../components/user/User";
 import axios from "axios";
 import Product from "../components/product/Product";
 import api from "../services/api";
-
+// import jwt_decode from "jwt-decode";
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -46,7 +46,8 @@ function a11yProps(index: number) {
 
 // const BASE_URL = "https://api.180s.com.br/api/auth";
 const token = "lkYGNIXprV3W8nBk";
-
+// const decoded = jwt_decode(token);
+// console.log(decoded);
 // axios
 //   .get(BASE_URL + "?accessToken=" + token)
 //   .then((response) => {
@@ -101,18 +102,7 @@ export default function BackofficeCopy() {
   }, []);
 
   return (
-    <Grid
-      container
-      // justifyContent="center"
-      height="calc(100vh - 120px)"
-      // flexGrow={1}
-      // sx={{
-      //   flexGrow: 1,
-      //   bgcolor: "background.paper",
-      //   display: "flex",
-      //   height: "calc(100vh - 120px)",
-      // }}
-    >
+    <Grid container height="calc(100vh - 120px)">
       <Tabs
         orientation="vertical"
         variant="scrollable"
