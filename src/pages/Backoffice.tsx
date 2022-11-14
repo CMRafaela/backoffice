@@ -51,6 +51,46 @@ function Backoffice() {
     setValue(newValue);
   };
 
+  // const [account, setAccount] = useState<{
+  //   name: string;
+  //   id: string;
+  //   products: ProdutoType[];
+  //   dob: any;
+  //   documentNumber: ProdutoType[];
+  // }>({ name: "", id: "", products: [], dob: "", documentNumber: [] });
+
+  // useEffect(() => {
+  //   async function handleUser() {
+  //     const config = {
+  //       headers: {
+  //         "X-Api-Key": "lkYGNIXprV3W8nBk",
+  //         "Content-Type": "application/x-www-form-urlencoded",
+  //       },
+  //     };
+
+  //     axios
+  //       .post("https://api.180s.com.br/api/auth", null, config)
+  //       .then((res) => {
+  //         console.log(res.data);
+  //       })
+  //       .catch((error) => {
+  //         console.error(error, "why");
+  //       });
+
+  //     const { data } = await axios.post(
+  //       `https://api.180s.com.br/api/auth`,
+  //       null,
+  //       {
+  //         headers: { "x-api-key": "lkYGNIXprV3W8nBk" },
+  //       }
+  //     );
+  //     console.log(data, "não imprimindo ");
+  //     setAccount(data);
+  //   }
+
+  //   handleUser();
+  // }, []);
+
   const [account, setAccount] = useState<{
     name: string;
     id: string;
